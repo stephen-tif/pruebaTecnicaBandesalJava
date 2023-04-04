@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Prueba BANDESAL - Login</title>
+        <link rel="stylesheet" href="https://unpkg.com/primeflex@^3/primeflex.css"/>
+        <style>
+            body{
+                background: #C9D6FF;  /* fallback for old browsers */
+                background: -webkit-linear-gradient(to left, #E2E2E2, #C9D6FF);  /* Chrome 10-25, Safari 5.1-6 */
+                background: linear-gradient(to left, #E2E2E2, #C9D6FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            }
+        </style>
+    </h:head>
+    <h:body>
+        <h:form>        
+            <p:growl id="growl" showDetail="true" life="2000">
+                <p:autoUpdate />
+            </p:growl>
+
+            <p:panel header="Login" widgetVar="dlg" style="width: 25%; margin:300px auto;">
+                <h:panelGrid columns="2" cellpadding="5">
+                    <h:outputLabel for="username" value="Username:" />
+                    <p:inputText id="username" value="#{baseController.usuario.usuario}" required="true" label="username" />
+
+                    <h:outputLabel for="password" value="Password:" />
+                    <p:password id="password" value="#{baseController.usuario.clave}" required="true" label="password" />
+
+                    <f:facet name="footer">
+                        <p:commandButton value="Login" update="growl" action="#{baseController.iniciarSesion()}"/>
+                    </f:facet>  
+                </h:panelGrid>
+            </p:panel>    
+        </h:form>
+    </h:body>
+</html>
+

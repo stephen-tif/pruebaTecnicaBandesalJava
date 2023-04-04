@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Prueba BANDESAL</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+        <link rel="stylesheet" href="https://unpkg.com/primeflex@^3/primeflex.css"/>
+        <h:outputStylesheet name="primeicons/primeicons.css" library="primefaces"/>
+        
+        <f:event type="preRenderView" listener="#{baseController.verificarSesion()}"/>
+    </h:head>
+    <h:body>
+        <p:layout fullPage="True">
+            <p:layoutUnit position="north">
+                <center>
+                    <h1>BANCO DE DESARROLLO DE EL SALVADOR</h1>
+                </center>
+            </p:layoutUnit>
+            <p:layoutUnit position="west" 
+                          header="Menú" 
+                          resizable="true" 
+                          minSize="300"
+                          >
+                <h:form>
+                <p:menu toggleable="true" style="width: 95%;" >
+                    <p:menuitem value="Principal" icon="ui-icon-home" url="./principal.xhtml" class="py-2"/>
+                    <p:menuitem value="Readers" icon="ui-icon-bookmark" url="./reader.xhtml" class="py-2"/>
+                    <p:menuitem value="Blogs" icon="ui-icon-comment" url="./blog.xhtml" class="py-2"/>
+                    <p:menuitem value="Readers por blog" icon="ui-icon-pin-w" url="./blog_reader.xhtml" class="py-2"/>
+                    <p:menuitem icon="ui-icon-power" actionListener="#{baseController.cerrarSesion()}" 
+                                value="Cerrar sesión" action="./login?faces-redirect=true" class="py-2"/>
+                </p:menu>
+                    </h:form>
+            </p:layoutUnit>
+            <p:layoutUnit position="center">
+                <ui:insert name="content"></ui:insert>
+            </p:layoutUnit>
+        </p:layout>
+        
+        <!-- Los modals deben ir fuera del layout -->
+        <ui:insert name="modals"></ui:insert>
+    </h:body>
+</html>
+
