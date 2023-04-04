@@ -61,25 +61,14 @@ Al desplegar la aplicacion, a demas de poder utilizar el portal, tambien se leva
 | PUT | **http://localhost:16271/pruebaTecnicaBandesal/webresources/ws_blog/{id}** | Sirve para modificar un nuevo registro |
 | DELETE | **http://localhost:16271/pruebaTecnicaBandesal/webresources/ws_blog/{id}** | Sirve para eliminar un nuevo registro |
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#### Endpoints para informacion de Readers
+| Metodo | URL | Descripcion |
+| ------ | ------ | ------|
+| GET | **http://localhost:16271/pruebaTecnicaBandesal/webresources/ws_reader** | Sirve para extraer todos los registros |
+| GET | **http://localhost:16271/pruebaTecnicaBandesal/webresources/ws_reader/{id}** | Sirve para extraer la informacion de un registro filtrado por su Id |
+| GET | **http://localhost:16271/pruebaTecnicaBandesal/webresources/ws_reader/{from}/{to}** | Sirve para extraer la informacion de un registro filtrado por rango |
+| GET | **http://localhost:16271/pruebaTecnicaBandesal/webresources/ws_reader/count** | Sirve para obtener el numero de registros existentes |
+| POST | **http://localhost:16271/pruebaTecnicaBandesal/webresources/ws_reader** | Sirve para crear un nuevo registro |
+| PUT | **http://localhost:16271/pruebaTecnicaBandesal/webresources/ws_reader/{id}** | Sirve para modificar un nuevo registro |
+| DELETE | **http://localhost:16271/pruebaTecnicaBandesal/webresources/ws_reader/{id}** | Sirve para eliminar un nuevo registro |
 
