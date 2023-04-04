@@ -37,6 +37,7 @@ Descarga de proyecto con git
 ```sh
 git clone https://github.com/stephen-tif/pruebaTecnicaBandesalJava.git
 cd pruebaTecnicaBandesalJava
+git checkout master
 ```
 
 **En la raiz del proyecto se encuentra el script inicial de la base de datos MySQL _prueba_bandesal.sql_**
