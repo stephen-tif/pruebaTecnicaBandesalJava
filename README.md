@@ -50,7 +50,7 @@ _Abrir proyecto con NetBeans IDE 8.2 de preferencia..._
 ## Consumo de WebService
 Al desplegar la aplicacion, a demas de poder utilizar el portal, tambien se levantan los servicios web para los procesos externos que requieran de la misma informacion.
 
-#### Endpoints para informacion de Blogs
+### Endpoints para informacion de Blogs
 | Metodo | URL | Descripcion |
 | ------ | ------ | ------|
 | GET | **http://localhost:16271/pruebaTecnicaBandesal/webresources/ws_blog** | Sirve para extraer todos los registros |
@@ -61,7 +61,7 @@ Al desplegar la aplicacion, a demas de poder utilizar el portal, tambien se leva
 | PUT | **http://localhost:16271/pruebaTecnicaBandesal/webresources/ws_blog/{id}** | Sirve para modificar un nuevo registro |
 | DELETE | **http://localhost:16271/pruebaTecnicaBandesal/webresources/ws_blog/{id}** | Sirve para eliminar un nuevo registro |
 
-#### Endpoints para informacion de Readers
+### Endpoints para informacion de Readers
 | Metodo | URL | Descripcion |
 | ------ | ------ | ------|
 | GET | **http://localhost:16271/pruebaTecnicaBandesal/webresources/ws_reader** | Sirve para extraer todos los registros |
@@ -71,4 +71,15 @@ Al desplegar la aplicacion, a demas de poder utilizar el portal, tambien se leva
 | POST | **http://localhost:16271/pruebaTecnicaBandesal/webresources/ws_reader** | Sirve para crear un nuevo registro |
 | PUT | **http://localhost:16271/pruebaTecnicaBandesal/webresources/ws_reader/{id}** | Sirve para modificar un nuevo registro |
 | DELETE | **http://localhost:16271/pruebaTecnicaBandesal/webresources/ws_reader/{id}** | Sirve para eliminar un nuevo registro |
+
+### Endpoints para informacion de Readers y Blogs relacionados
+| Metodo | URL | Descripcion |
+| ------ | ------ | ------|
+| GET | **http://localhost:16271/pruebaTecnicaBandesal/webresources/ws_blogreader** | Sirve para extraer todos los registros |
+| GET | **http://localhost:16271/pruebaTecnicaBandesal/webresources/ws_blogreader/{id}** | Sirve para extraer la informacion de un registro filtrado por su Id |
+| GET | **http://localhost:16271/pruebaTecnicaBandesal/webresources/ws_blogreader/{from}/{to}** | Sirve para extraer la informacion de un registro filtrado por rango |
+| GET | **http://localhost:16271/pruebaTecnicaBandesal/webresources/ws_blogreader/count** | Sirve para obtener el numero de registros existentes |
+| POST | **http://localhost:16271/pruebaTecnicaBandesal/webresources/ws_blogreader** | Sirve para crear un nuevo registro |
+| PUT | **http://localhost:16271/pruebaTecnicaBandesal/webresources/ws_blogreader/{id}** | Sirve para modificar un nuevo registro |
+| DELETE | **http://localhost:16271/pruebaTecnicaBandesal/webresources/ws_blogreader/{id}** | Sirve para eliminar un nuevo registro |
 
